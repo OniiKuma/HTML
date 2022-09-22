@@ -1,109 +1,34 @@
 <!DOCTYPE html>
-<html>
+<!--start our html tags and set the lang to english-->
+<html lang="eng">
+    <!--start our head tags-->
 <head>
-    <title>Moon Rocket countdown timer</title>
-<!--Add space background-->
-<style>
-    body {
-        background-image: url("https://cdn.pixabay.com/photo/2017/08/30/01/05/milky-way-2695569__480.jpg");
-        text-align: center;
-        color: white;
-        background-attachment: fixed;
-        background-size: cover;
-    }
-
-    h1 {
-        text-align: center;
-        font-size: 75px;
-    }
-
-    h2 {
-        text-align: center;
-        font-size: 50px;
-    }
-
-    p {
-        text-align: left;
-        font-size: x-large;
-    }
-
-    #theFinalCountdown {
-        text-align: center;
-        font-size: xx-large;
-    }
-
-    button {
-        background-color: white;
-        color: green;
-        border: none;
-        padding: 15px 32px;
-        text-align: center;
-        text-decoration: none;
-        display: inline-block;
-        font-size: 16px;
-        margin: 4px 2px;
-        cursor: pointer;
-        border-radius: 42px;
-        font-weight: bold;
-        align-self: center;
-    }
-
-    button:hover {
-        background-color: transparent;
-        border: 2px solid green;
-        color: white;
-    }
-</style>
-<!--Add JS section to the head-->
-<script>
-    //The name of this function is the Final Countdown
-    //Note this function take no parameters ()
-    function theFinalCountdown() { //This is the start of the function, its called the scope operator
-        //This is a variable declaration
-        //The variable name is currentCount it is used for tyhe number in the countdown
-        var currentCount = 10;
-        //This it the timer varibale it is used to store the linear object
-        var timer = setInterval(function() {
-            //This will allow you to change the text of the element with the id theFinalCountdown
-            document.getElementById("theFinalCountdown").innerHTML = currentCount;
-            //THis will decrement the currentCount variable by 1
-            //This is the same as currentCount = currentCount -1;
-            currentCount--;
-            //This will check if the currentCount is less than or equal to 0
-            if (currentCount < -1) {
-                //Clear the timer
-                clearInterval(timer);
-                //Change the text of the th element with the id of theFinalCountdown
-                document.getElementById("theFinalCountdown").innerHTML = "Launch is a Go! I repeat, launch is a Go! Blast off!";
-                //This will pop up a window on your screen with this message
-                alert("Launch is a Go! I repeat, launch is a Go! Blast off!");
-            }
-        }, 1000);
-    } //This is the end of the function, it's called the scope operator
-</script>
+    <!--title tag to name the tab-->
+<title>Intergalactic Space Casino</title>
+<!--call the CSS page so this html can use it-->
+<link rel="stylesheet" href="Style.css">
+<!--call the js page so this html page can use it-->
+<script src="JSCODE.js"></script>
 </head>
-
+<!--start our body tags-->
 <body>
-    <br><br>
-    <h1>Starbase 13</h1>
-    <br><br>
-    <hr>
-    <h2>Space Station Launch Center</h2>
-
-    <!--Write a paragraph tag and inside it explain hwo to push the button to launch the rocket mission-->
-    <p>To launch a mission from Starbase 13 as the Space Ranger on duty, you will need to first push the button on the control panel. 
-        THis will initiate the sequence that will lead to the rocket take off. Once the button is pushed,
-        you will need to wait for the countdown to finish before the rocket takes off.
-    </p>
-    <!--br tag skips a line-->
-    <br>
-    <!--hr tag adds a page break-->
-    <hr>
-    <br>
-    <h2>Control Panel</h2>
-    <!--Create a moon rocket countdown after the user presses a button-->
-    <button onclick="theFinalCountdown()">Start Countdown</button>
-    <p id="theFinalCountdown">T-minus 10 seconds and holding. Cleared for launch countdown...</p>
+    <!--start header tags-->
+    <h1>Intergalactic Space Casino</h1>
+    <script>
+        //call the display welcome function
+        displayWelcome() ;
+        //create a few blank lines for spacing
+        document.write("<br><br>");
+        //call the instructions function
+        displayInstructions();
+        //add more blank lines for spacing
+        document.write("<br><br>");
+        //put the title of the game in a header tag
+        document.write("<h2>The Space Game</h2>");
+        //call main display game function to run the game
+        play();
+        //add more lines for spacing 
+        document.write("<br><br>");
+    </script>
 </body>
-
 </html>
